@@ -83,9 +83,29 @@ const editNoteByIdHandler = (request, h) => {
   }).code(404);
 };
 
+const deleteNoteByIdHandler = (request, h) => {
+  const {id} = request.params;
+  const index = notes.findIndex((note) => note.id === id);
+
+  if (index !== -1) {
+    notes.splice(index, 1);
+
+    return {
+      status: 'success',
+      message: 'Note deleted successfully.',
+    };
+  }
+
+  return h.response({
+    status: 'fail',
+    message: `Note not found. The note's id doesn't exists.`,
+  }).code(404);
+};
+
 module.exports = {
   addNoteHandler,
   getAllNotesHandler,
   getNoteByIdHandler,
   editNoteByIdHandler,
+  deleteNoteByIdHandler,
 };
