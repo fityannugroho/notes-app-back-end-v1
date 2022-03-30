@@ -174,14 +174,6 @@ Use this endpoint to update a note.
                 "status": "fail",
                 "message": "Note not found. The note's id doesn't exists."
               }
-      500:
-        body:
-          application/json:
-            example: |
-              {
-                "status": "error",
-                "message": "Note failed to update"
-              }
 ```
 
 ### 4. Delete a note
@@ -208,13 +200,5 @@ Use this endpoint to delete a note.
               {
                 "status": "fail",
                 "message": "Note not found. The note's id doesn't exists."
-              }
-      500:
-        body:
-          application/json:
-            example: |
-              {
-                "status": "error",
-                "message": "Note failed to delete"
               }
 ```
