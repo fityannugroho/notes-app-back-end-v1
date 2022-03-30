@@ -31,4 +31,32 @@ const addNoteHandler = (request, h) => {
   }).code(500);
 };
 
-module.exports = {addNoteHandler};
+const getAllNotesHandler = (request, h) => {
+  return {
+    status: 'success',
+    data: {notes},
+  };
+};
+
+const getNoteByIdHandler = (request, h) => {
+  const {id} = request.params;
+  const note = notes.find((note) => note.id === id);
+
+  if (note !== undefined) {
+    return {
+      status: 'success',
+      data: {note},
+    };
+  }
+
+  return h.response({
+    status: 'fail',
+    message: `Note not found. The note's id doesn't exists.`,
+  }).code(404);
+};
+
+module.exports = {
+  addNoteHandler,
+  getAllNotesHandler,
+  getNoteByIdHandler,
+};
