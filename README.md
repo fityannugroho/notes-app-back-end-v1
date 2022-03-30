@@ -64,7 +64,7 @@ Use this endpoint to add a new note.
           application/json:
             example: |
               {
-                "status": "error",
+                "status": "fail",
                 "message": "Note failed to add"
               }
 ```
