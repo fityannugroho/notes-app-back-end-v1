@@ -1,0 +1,24 @@
+{
+  "name": "notes-app-backend",
+  "version": "0.1.0",
+  "description": "Back-End of notes app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js",
+    "lint": "eslint ./src"
+  },
+  "keywords": [
+    "notes",
+    "backend"
+  ],
+  "author": "fityannugroho",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.2.1"
+  }
+}
