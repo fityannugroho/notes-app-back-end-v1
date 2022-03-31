@@ -98,14 +98,6 @@ Use this endpoint to get all notes or a specific note by its `id`.
                   ]
                 }
               }
-      404:
-        body:
-          application/json:
-            example: |
-              {
-                "status": "error",
-                "message": "Note not found. The note's id doesn't exists."
-              }
 ```
 
 ```raml
@@ -136,7 +128,7 @@ Use this endpoint to get all notes or a specific note by its `id`.
             example: |
               {
                 "status": "fail",
-                "message": "Note not found. The note's id doesn't exists."
+                "message": "Note not found. The note's id doesn't exists"
               }
 ```
 
@@ -172,7 +164,7 @@ Use this endpoint to update a note.
             example: |
               {
                 "status": "fail",
-                "message": "Note not found. The note's id doesn't exists."
+                "message": "Note not found. The note's id doesn't exists"
               }
 ```
 
@@ -199,6 +191,6 @@ Use this endpoint to delete a note.
             example: |
               {
                 "status": "fail",
-                "message": "Note not found. The note's id doesn't exists."
+                "message": "Note not found. The note's id doesn't exists"
               }
 ```

@@ -18,7 +18,7 @@ const addNoteHandler = (request, h) => {
   if (isSuccess) {
     return h.response({
       status: 'success',
-      message: 'Note added successfully.',
+      message: 'Note added successfully',
       data: {
         noteId: id,
       },
@@ -51,7 +51,7 @@ const getNoteByIdHandler = (request, h) => {
 
   return h.response({
     status: 'fail',
-    message: `Note not found. The note's id doesn't exists.`,
+    message: `Note not found. The note's id doesn't exists`,
   }).code(404);
 };
 
@@ -73,13 +73,13 @@ const editNoteByIdHandler = (request, h) => {
 
     return {
       status: 'success',
-      message: 'Note updated successfully.',
+      message: 'Note updated successfully',
     };
   }
 
   return h.response({
     status: 'fail',
-    message: `Note not found. The note's id doesn't exists.`,
+    message: `Note not found. The note's id doesn't exists`,
   }).code(404);
 };
 
@@ -92,13 +92,13 @@ const deleteNoteByIdHandler = (request, h) => {
 
     return {
       status: 'success',
-      message: 'Note deleted successfully.',
+      message: 'Note deleted successfully',
     };
   }
 
   return h.response({
     status: 'fail',
-    message: `Note not found. The note's id doesn't exists.`,
+    message: `Note not found. The note's id doesn't exists`,
   }).code(404);
 };
 
